@@ -15,8 +15,7 @@ use Symfony\Component\Console\Output\{ConsoleOutputInterface,OutputInterface};
 use Twig\Environment;
 use Twig\Extension\EscaperExtension;
 use Twig\Loader\{ArrayLoader,FilesystemLoader};
-
-use Dana\Twigc\ComposerHelper;
+use Twig\Extra\Intl\IntlExtension;
 
 /**
  * This class represents the entire `twigc` application.
@@ -249,6 +248,8 @@ class Application {
           $template
         ),
       ]);
+
+      $twig->addExtension(new IntlExtension());
 
       $twig->getExtension(EscaperExtension::class)->setEscaper(
         'json',
