@@ -18,7 +18,7 @@
     "symfony/finder":      "^5.0",
     "twig/twig":           "^3.0",
     "ulrichsg/getopt-php": "^3.3",
-    "twig/intl-extra":     "^3.5"
+    "twig/intl-extra":     "3.0"
   },
 
   "require-dev": {
